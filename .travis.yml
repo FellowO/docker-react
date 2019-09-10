@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true dupa2 npm run test
 
 deploy:
-  provider: elasticbeantalk
+  provider: elasticbeanstalk
   region: "us-east-2"
   app: "dupa"
   env: "Dupa-env"
