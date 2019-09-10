@@ -23,3 +23,6 @@ deploy:
 
   secret_key_id:
      secure: $AWS_SECRET_KEY
+
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
