@@ -7,3 +7,19 @@ before_install:
 
 script:
   - docker run -e CI=true dupa2 npm run test
+
+deploy:
+  provider: elasticbeantalk
+  region: "us-east-2"
+  app: "dupa"
+  env: "Dupa-env"
+  bucket_name: "elasticbeanstalk-us-east-2-664730268108"
+  bucket_path: "dupa"
+  on:
+    branch: "master"
+
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+
+    secret_key_id:
+      secure: $AWS_SECRET_KEY
